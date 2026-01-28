@@ -1,4 +1,13 @@
+/*
+=====================================================================================
+	This stored procedure performs the ETL (Extract,Transform,Load) process to 
+	populate the 'Silver' schema tables from the 'Bronze' schema.
 
+	Actions Performed:
+	-Truncates Silver tables.
+	- Insert transformed and cleaned data from Bronze into Silver tables.
+======================================================================================
+*/
 CREATE OR REPLACE PROCEDURE silver.load_silver_layers()
 LANGUAGE plpgsql
 AS $$
